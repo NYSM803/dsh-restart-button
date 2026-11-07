@@ -26,16 +26,16 @@ means quitting the app from the tray menu.
 
 ## Install
 
-Through the plugin manager (recommended): open **插件 / Plugins → 安装插件**, then install
-`dsh-restart-button` (npm) or `github:NYSM803/dsh-restart-button`.
-
+Through the plugin manager: open **插件 / Plugins → 安装插件** and paste the package URL below.
 From a terminal, in the profile you use:
 
 ```sh
-dsh plugin --profile desktop add dsh-restart-button
-# or, straight from GitHub:
-dsh plugin --profile desktop add github:NYSM803/dsh-restart-button
+dsh plugin --profile desktop add https://codeload.github.com/NYSM803/dsh-restart-button/tar.gz/refs/heads/main
 ```
+
+> That URL form needs nothing but pnpm. The `github:NYSM803/dsh-restart-button` shorthand also works,
+> but **only when `git` is installed** — pnpm resolves it with `git ls-remote`, and without git the
+> install stops with `ERR_PNPM_GIT_RESOLVE_FAILED`.
 
 The host half mounts on the next app start; the browser half after the page reloads. Restart the
 app once after installing and the button appears.

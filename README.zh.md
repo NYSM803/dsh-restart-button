@@ -22,15 +22,15 @@
 
 ## 安装
 
-推荐走插件管理器：**插件 → 安装插件**，装 `dsh-restart-button`（npm）或 `github:NYSM803/dsh-restart-button`。
-
-命令行方式（在你要用的 profile 里）：
+推荐走插件管理器：**插件 → 安装插件**，粘贴下面的地址。命令行方式（在你要用的 profile 里）：
 
 ```sh
-dsh plugin --profile desktop add dsh-restart-button
-# 或者直接从 GitHub：
-dsh plugin --profile desktop add github:NYSM803/dsh-restart-button
+dsh plugin --profile desktop add https://codeload.github.com/NYSM803/dsh-restart-button/tar.gz/refs/heads/main
 ```
+
+> 这种写法只依赖 pnpm，不需要 git。`github:NYSM803/dsh-restart-button` 这种短写法也能用，
+> 但**本机必须装了 git**——pnpm 要用 `git ls-remote` 解析它，没有 git 就会报
+> `ERR_PNPM_GIT_RESOLVE_FAILED`。
 
 宿主半在下次启动应用时装载，浏览器半在页面重新加载后生效——装完重启一次应用，按钮就出现了。
 
