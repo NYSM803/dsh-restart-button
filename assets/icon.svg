@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="dsh restart button">
+  <rect width="180" height="180" rx="40" fill="#1c2029"/>
+  <circle cx="90" cy="90" r="52" fill="none" stroke="#3d7bff" stroke-width="7"/>
+  <g fill="none" stroke="#e7ecf5" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M52 90a38 38 0 1 0 12.6-28.3"/>
+    <polyline points="52 58 52 78 72 78"/>
+  </g>
+</svg>

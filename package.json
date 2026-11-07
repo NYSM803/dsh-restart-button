@@ -1,0 +1,56 @@
+{
+  "name": "dsh-restart-button",
+  "version": "0.1.0",
+  "description": "Draggable floating restart button for the dsh Web GUI: custom icon, custom background colour, lockable position, one-click app + host restart behind a confirmation dialog",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "restart",
+    "floating-button",
+    "web-ui",
+    "cordis"
+  ],
+  "license": "MIT",
+  "author": "dsh-restart-button contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NYSM803/dsh-restart-button.git"
+  },
+  "homepage": "https://github.com/NYSM803/dsh-restart-button#readme",
+  "bugs": {
+    "url": "https://github.com/NYSM803/dsh-restart-button/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "assets/icon.svg"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.2-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
