@@ -1,6 +1,6 @@
 {
-  "name": "dsh-restart-button",
-  "version": "0.2.1",
+  "name": "dsh-plugin-restart-button",
+  "version": "0.2.2",
   "description": "Draggable floating restart button for the dsh Web GUI: custom icon, custom background colour, lockable position, one-click app + host restart with a confirm dialog, cancel and timeout protection",
   "keywords": [
     "dsh",
