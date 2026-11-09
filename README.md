@@ -12,9 +12,9 @@ refuses to close — the button says so, cleans up after itself, and never leave
 
 - **Draggable** — the button sits in the corner you drag it to; the position is stored in
   `~/.dsh/restart-button.json` and survives a restart.
-- **Confirm, then watch** — a click opens a dialog. In the waiting state you can still cancel with
-  **取消重启**; after 45 seconds without the app closing, the plugin cancels the job itself and tells
-  you why.
+- **Confirm, then watch** — a click opens a dialog. **Until the close request goes out** you can still
+  cancel with **取消重启**; once it has, the cycle is irreversible and the dialog says so. After 45
+  seconds without the app closing, the plugin cancels the job itself and tells you why.
 - **Custom icon** — four built-in vector glyphs, or upload your own image (PNG / JPG / WebP / GIF / SVG, ≤ 2 MB).
 - **Custom background colour** — pick any colour; the glyph switches between dark and light ink
   automatically. Unset, it follows the UI theme.
@@ -123,7 +123,8 @@ lib/client.js       browser half: floating button, confirm/cancel dialog, settin
 
 ## Requirements
 
-- dsh >= 0.2.2-rc.1, Windows (the relauncher uses `taskkill` and the app's own binary).
+- dsh >= 0.2.2-rc.1, **Windows desktop app only**: the relauncher shells out to `tasklist` / `taskkill` / `cmd` / `powershell` and recognises exactly one process image, `DeepSeek Harness.exe`.
+- On a `dsh web` CLI host the button still renders (the browser half is generic) but a restart always fails: there is no desktop process to close and relaunch.
 - React 18 is provided by the host.
 
 ## License
